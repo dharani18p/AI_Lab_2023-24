@@ -45,8 +45,7 @@ bfs(visited, graph, '5')    # function calling
 ```
 ### Output:
 
-
-![Uploading 304026186-0cf15918-39c7-4c62-aeb5-be96300e9315.png…]()
+![304026186-0cf15918-39c7-4c62-aeb5-be96300e9315](https://github.com/user-attachments/assets/aaf4b7f7-4f33-44d9-b712-424460bd32cb)
 
 
 ### Result:
