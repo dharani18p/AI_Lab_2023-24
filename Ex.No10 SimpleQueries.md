@@ -1,7 +1,6 @@
-# Ex.No: 10  Logic Programming –  Simple queries from facts and rules
-### DATE:                                                                            
-### REGISTER NUMBER : 
-### AIM: 
+# Ex.No: 10  Logic Programming –  Simple queries from facts and rules                                                    
+### REGISTER NUMBER : 212222220011
+### AIM:  
 To write a prolog program to find the answer of query. 
 ###  Algorithm:
  Step 1: Start the program <br> 
@@ -21,9 +20,19 @@ Construct the FOL representation for the following sentences <br>
 5.	 Bill eats peanuts  <br> 
    Convert into clause form and Prove that John like Apple by using Prolog. <br> 
 ### Program:
-
-
+      food(apples).
+      food(chicken).
+      food(peanuts).
+      likes(john, X) :-
+      food(X).
+      eats(bill, X) :-
+      food(X).
+      eats(sue, X) :-
+      eats(bill, X).
+      
 ### Output:
+![425499931-39454765-7ba3-4f7c-bfbf-777170a8ed65](https://github.com/user-attachments/assets/bb79b29d-6048-4826-8c03-9740e0abf7b1)
+
 
 ### Task 2:
 Consider the following facts and represent them in predicate form: <br>              
@@ -34,18 +43,48 @@ Consider the following facts and represent them in predicate form: <br>
 Convert the facts in predicate form to clauses and then prove by resolution: “Steve likes BK301 course”<br> 
 
 ### Program:
+    likes(steve, X) :-
+    easy_course(X).
+    hard_course(science).
+    easy_course(X) :-
+    in_department(X, have_fun).
+   in_department(bk301, have_fun).
 
 
 ### Output:
+
+![425501252-354e66c3-8794-483f-8d8c-0e07b582c2c5](https://github.com/user-attachments/assets/308afa13-6b70-442e-8bdc-fb367f495599)
+
+
 
 ### Task 3:
 Consider the statement <br> 
 “This is a crime for an American to sell weapons to hostile nations. The Nano , enemy of America has some missiles and its missiles were sold it by Colonal West who is an American” <br> 
-Convert to Clause form and prove west is criminal by using Prolog.<br> 
+Convert to Clause form and prove west is criminal by using Prolog.<br>
+
 ### Program:
+     criminal(X):-
+     american(X),
+     weapon(Y),
+     hostile(Z),
+     sells(X,Y,Z).
+     weapon(Y):-
+     missile(Y).
+     hostile(Z):-
+     enemy(Z,america).
+     sells(west,Y,nano):-
+     missile(Y),
+     Thus the prolog programs were executed successfully and the answer of query was found.
+     owns(nano,Y).
+     missile(m).
+     owns(nano,m).
+     enemy(nano,america).
+     american(west).
 
 
 ### Output:
+
+![425501147-fc7d4254-3a40-4e12-8dc8-aef08db79af6](https://github.com/user-attachments/assets/b4d7f452-07fb-41d4-9b5e-0c8e63ff5344)
 
 ### Result:
 Thus the prolog programs were executed successfully and the answer of query was found.
